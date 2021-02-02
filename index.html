@@ -11,20 +11,46 @@
 </head>
 <body>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
 
-  Pageviews
-  $ /month
+  <div class="hero">
+    <h2 class="hero__header">
+    Simple, traffic-based pricing
+    </h2>
+    <p class="hero__text">
+    Sign-up for our 30-day trial. No credit card required.
+    </p>
+  </div>
 
-  Monthly Billing
-  Yearly Billing 25% discount
+  <div class="card">
+    <p class="card__pageviews">100K<span class="card__view-number"></span> Pageviews</p>
+    <input type="range" min="0" max="4" step="1" class="card__slider">
+    <p class="card__pricing">
+      <span class="card__price">$16.00</span> /month
+    </p>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+    <div class="card__billing-type">
+      <p class="card__billing-text">
+      Monthly Billing
+      </p>
+      <input type="checkbox" class="card__billing-checkbox">
+      <p class="card__billing-text">
+      Yearly Billing <span class="card__discount">25% discount</span>
+      </p>
+    </div>
 
-  Start my trial
+    <ul class="card__checklist">
+      <li class="card__li">
+        Unlimited websites
+      </li>
+      <li class="card__li">
+        100% data ownership
+      </li>
+      <li class="card__li">
+        Email reports
+      </li>
+    </ul>
 
+    <button>Start my trial</button>
+  </div>
 </body>
 </html>
