@@ -22,35 +22,44 @@
   </div>
 
   <div class="card">
-    <p class="card__pageviews">100K<span class="card__view-number"></span> Pageviews</p>
-    <input type="range" min="0" max="4" step="1" class="card__slider">
-    <p class="card__pricing">
-      <span class="card__price">$16.00</span> /month
-    </p>
 
-    <div class="card__billing-type">
-      <p class="card__billing-text">
-      Monthly Billing
+    <div class="plan">
+      <p class="plan__pageviews">
+        100K Pageviews
       </p>
-      <input type="checkbox" class="card__billing-checkbox">
-      <p class="card__billing-text">
-      Yearly Billing <span class="card__discount">25% discount</span>
+      <input type="range" min="0" max="4" step="1" class="plan__slider">
+      <p class="plan__price">
+      <span class="plan--lg-text">$16.00</span> / month
       </p>
     </div>
 
-    <ul class="card__checklist">
-      <li class="card__li">
-        Unlimited websites
-      </li>
-      <li class="card__li">
-        100% data ownership
-      </li>
-      <li class="card__li">
-        Email reports
-      </li>
-    </ul>
+    <div class="billing">
+      <p class="billing__period">
+      Monthly Billing
+      </p>
+      <input type="checkbox" class="billing__toggle">
+      <p class="billing__period">
+      Yearly Billing <span class="billing--discount">-25%</span>
+      </p>
+    </div>
 
-    <button>Start my trial</button>
+    <div class="footer">
+      <ul class="footer__ul">
+        <li class="footer__li">
+        Unlimited websites
+        </li>
+        <li class="footer__li">
+        100% data ownership
+        </li>
+        <li class="footer__li">
+        Email reports
+        </li>
+      </ul>
+      
+      <button class="footer__button">Start my trial</button>
+    </div>
   </div>
+
+  <script src="/app.js"></script>
 </body>
 </html>

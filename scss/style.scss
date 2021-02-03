@@ -4,7 +4,7 @@ $gray-red: hsl(14, 92%, 95%);
 $light-red: hsl(15, 100%, 70%);
 $pale-blue: hsl(226, 100%, 87%);
 
-$white: hsl (0, 0%, 100%);
+$white: hsl(0, 0%, 100%);
 $v-pale-blue: hsl(230, 100%, 99%);
 $lt-gray-blue1: hsl(224, 65%, 95%);
 $lt-gray-blue2: hsl(223, 50%, 87%);
@@ -22,6 +22,7 @@ body {
   font-family: 'Manrope', sans-serif;
   text-align: center;
   height: 100vh;
+  color: $gray-blue;
   background: url(/images/bg-pattern.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,6 +41,7 @@ body {
 
   &__header {
     margin: 2rem 0 1rem 0;
+    color: $dk-desat-blue;
   }
 
   &__text {
@@ -53,6 +55,99 @@ body {
 .card {
   background-color: $white;
   margin-top: 2rem;
-  
-  
+  padding: 1rem;
+  width: 90%;
+}
+
+.plan {
+  margin-top: 1.5rem;
+
+  &__pageviews {
+    text-transform: uppercase;
+  }
+
+  &__slider {
+    margin: 1rem 0;
+  }
+
+  &__price {
+
+  }
+
+  &--lg-text {
+    font-size: 1.5rem;
+    color: $dk-desat-blue;
+    font-weight: bold;
+  }
+}
+
+.billing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+
+  &__toggle {
+    position: relative;
+    width: 3rem;
+    height: 1.5rem;
+    -webkit-appearance: none;
+    background: $lt-gray-blue2;
+    outline: none;
+    border-radius: 20px;
+    margin: 0 1rem;
+
+    &:checked {
+      background: $strong-cyan;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      top: 4px;
+      left: 4px;
+      background: $white;
+    }
+    &:checked::before {
+      left: 1.7rem;
+    }
+  }
+
+  &__period {
+ 
+  }
+
+  &--discount {
+
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+
+  &__ul {
+
+  }
+
+  &__li {
+    list-style: none;
+
+    &::before {
+      content: url(/images/icon-check.svg);
+      margin-right: 10px;
+    }
+  }
+
+  &__button {
+    margin: 1.5rem 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: $dk-desat-blue;
+    color: $white;
+  }
 }
