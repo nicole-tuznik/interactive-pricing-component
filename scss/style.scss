@@ -1,4 +1,4 @@
-$soft-cyan: hsl(174, 77%, 80%);
+$soft-cyan: rgb(165, 243, 235);
 $strong-cyan: hsl(174, 86%, 45%);
 $gray-red: hsl(14, 92%, 95%);
 $light-red: hsl(15, 100%, 70%);
@@ -6,7 +6,7 @@ $pale-blue: hsl(226, 100%, 87%);
 
 $white: hsl(0, 0%, 100%);
 $v-pale-blue: hsl(230, 100%, 99%);
-$lt-gray-blue1: hsl(224, 65%, 95%);
+$lt-gray-blue1: rgb(234, 238, 251);
 $lt-gray-blue2: hsl(223, 50%, 87%);
 $gray-blue: hsl(225, 20%, 60%);
 $dk-desat-blue: hsl(227, 35%, 25%);
@@ -37,6 +37,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  margin-bottom: 2rem;
   
 
   &__header {
@@ -54,24 +55,73 @@ body {
 
 .card {
   background-color: $white;
-  margin-top: 2rem;
   padding: 1rem;
   width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 13px 14px $lt-gray-blue1;
 }
 
 .plan {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
   &__pageviews {
     text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 0.7px;
   }
 
   &__slider {
     margin: 1rem 0;
+    -webkit-appearance: none;
+    width: 90%;
+    height: 0.5rem;
+    background: linear-gradient(90deg, $soft-cyan 50%, $lt-gray-blue1 50%);
+    border-radius: 15px;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: url(/images/icon-slider.svg) $strong-cyan;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: center;
+      cursor: pointer;
+      box-shadow: 0px 6px 10px 8px $soft-cyan;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 60%;
+        transform: scale(1.1);
+      }
+    }
+
+    &::-moz-range-thumb {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: url(/images/icon-slider.svg) $strong-cyan;
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: center;
+      box-shadow: 0px 6px 10px 8px $soft-cyan;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 60%;
+        transform: scale(1.1);
+      }
+
+    }
   }
 
   &__price {
-
+    margin-top: 1rem;
   }
 
   &--lg-text {
@@ -96,9 +146,14 @@ body {
     outline: none;
     border-radius: 20px;
     margin: 0 1rem;
+    cursor: pointer;
 
     &:checked {
       background: $strong-cyan;
+    }
+
+    &:hover {
+      opacity: 60%;
     }
 
     &::before {
@@ -117,11 +172,18 @@ body {
   }
 
   &__period {
- 
+    font-size: 0.8rem;
   }
 
   &--discount {
+    background: $gray-red;
+    color: $light-red;
+    padding: 2px 5px;
+    margin-left: 2px;
+  }
 
+  &--long-text {
+    display: none;
   }
 }
 
@@ -129,7 +191,7 @@ body {
   margin-top: 2rem;
 
   &__ul {
-
+    line-height: 2;
   }
 
   &__li {
@@ -143,11 +205,96 @@ body {
 
   &__button {
     margin: 1.5rem 0;
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 3rem;
     border-radius: 20px;
     outline: none;
     border: none;
     background: $dk-desat-blue;
     color: $white;
+    font-family: 'Manrope', sans-serif;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px 15px 1px $gray-blue;
+
+    &:hover {
+      opacity: 80%;
+    }
   }
+}
+
+@media (min-width: 800px) {
+  .card {
+    width: 50%;
+    max-width: 500px;
+    position: relative;
+  }
+
+  .hero {
+
+    &__text {
+      width: 100%;
+    }
+  }
+  
+  .plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__pageviews {
+      margin-bottom: 0;
+      
+    }
+
+    &__price {
+      margin-top: 0;
+    }
+
+    &--lg-text {
+      font-size: 2rem;
+    }
+
+    &__slider {
+      order: 3;
+      width: 80%;
+      margin-top: 2rem;
+    }
+  }
+
+  .billing {
+
+    &--discount {
+      content: "25% discount";
+    }
+
+    &--short-text {
+      display: none;
+    }
+
+    &--long-text {
+      display: inline;
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      border-bottom: solid 1px $lt-gray-blue1;
+      position: absolute;
+      top: 64%;
+      }
+    }
+  
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1.5rem;
+    align-items: center;
+ 
+    &__li {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+}
 }
