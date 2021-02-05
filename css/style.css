@@ -9,28 +9,21 @@ body {
   text-align: center;
   height: 100vh;
   color: #858fad;
-  background: url(/images/bg-pattern.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #fafbff url(/images/bg-pattern.svg) no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
 
 .hero {
-  background: url(/images/pattern-circles.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: url(/images/pattern-circles.svg) center/contain no-repeat;
   margin-bottom: 2rem; }
   .hero__header {
     margin: 2rem 0 1rem 0;
     color: #293356; }
   .hero__text {
-    margin-bottom: 2rem;
     width: 55%;
-    margin-left: auto;
-    margin-right: auto; }
+    margin: 0 auto 2rem auto; }
 
 .card {
   background-color: white;
@@ -38,7 +31,8 @@ body {
   width: 90%;
   max-width: 400px;
   border-radius: 10px;
-  box-shadow: 10px 10px 13px 14px #eaeefb; }
+  box-shadow: 7px 7px 27px 9px #eaeefb;
+  position: relative; }
 
 .plan {
   margin-top: 1rem; }
@@ -60,10 +54,7 @@ body {
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-      background: url(/images/icon-slider.svg) #10d5c2;
-      background-repeat: no-repeat;
-      background-size: 60%;
-      background-position: center;
+      background: #10d5c2 url(/images/icon-slider.svg) center/60% no-repeat;
       cursor: pointer;
       box-shadow: 0px 6px 10px 8px #a5f3eb;
       transition: all 0.3s ease; }
@@ -74,10 +65,7 @@ body {
       width: 2.5rem;
       height: 2.5rem;
       border-radius: 50%;
-      background: url(/images/icon-slider.svg) #10d5c2;
-      background-repeat: no-repeat;
-      background-size: 60%;
-      background-position: center;
+      background: #10d5c2 url(/images/icon-slider.svg) center/60% no-repeat;
       box-shadow: 0px 6px 10px 8px #a5f3eb;
       cursor: pointer;
       transition: all 0.3s ease; }
@@ -105,7 +93,8 @@ body {
     outline: none;
     border-radius: 20px;
     margin: 0 1rem;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.3s ease; }
     .billing__toggle:checked {
       background: #10d5c2; }
     .billing__toggle:hover {
@@ -130,6 +119,12 @@ body {
     margin-left: 2px; }
   .billing--long-text {
     display: none; }
+  .billing::after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 1px #eaeefb;
+    position: absolute;
+    top: 54%; }
 
 .footer {
   margin-top: 2rem; }
@@ -155,40 +150,42 @@ body {
     .footer__button:hover {
       opacity: 80%; }
 
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   .card {
     width: 50%;
-    max-width: 500px;
-    position: relative; }
+    max-width: 500px; }
   .hero__text {
     width: 100%; }
   .plan {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center; }
     .plan__pageviews {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      margin-left: 1rem; }
     .plan__price {
-      margin-top: 0; }
+      margin-top: 0;
+      margin-right: 1rem; }
     .plan--lg-text {
       font-size: 2rem; }
     .plan__slider {
       order: 3;
-      width: 80%;
-      margin-top: 2rem; }
-  .billing--discount {
-    content: "25% discount"; }
-  .billing--short-text {
-    display: none; }
-  .billing--long-text {
-    display: inline; }
-  .billing::after {
-    content: '';
-    width: 100%;
-    border-bottom: solid 1px #eaeefb;
-    position: absolute;
-    top: 64%; }
+      width: 90%;
+      margin: 2rem auto 1rem auto; }
+  .billing {
+    margin-left: 5rem;
+    margin-bottom: 3rem; }
+    .billing--discount {
+      content: "25% discount"; }
+    .billing--short-text {
+      display: none; }
+    .billing--long-text {
+      display: inline; }
+    .billing::after {
+      top: 64%;
+      left: 0;
+      width: 100%; }
   .footer {
     display: flex;
     justify-content: space-between;
