@@ -52,6 +52,7 @@ body {
   border-radius: 10px;
   box-shadow: 7px 7px 27px 9px $lt-gray-blue1;
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .plan {
@@ -222,10 +223,11 @@ body {
   body {
     height: 100vh;
   }
-  
+
   .card {
     width: 50%;
     max-width: 500px;
+    margin-bottom: 0;
   }
 
   .hero {

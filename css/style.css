@@ -31,7 +31,8 @@ body {
   max-width: 400px;
   border-radius: 10px;
   box-shadow: 7px 7px 27px 9px #eaeefb;
-  position: relative; }
+  position: relative;
+  margin-bottom: 2rem; }
 
 .plan {
   margin-top: 1rem; }
@@ -154,7 +155,8 @@ body {
     height: 100vh; }
   .card {
     width: 50%;
-    max-width: 500px; }
+    max-width: 500px;
+    margin-bottom: 0; }
   .hero {
     margin-top: 0; }
     .hero__text {
