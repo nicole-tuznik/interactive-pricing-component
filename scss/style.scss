@@ -21,7 +21,6 @@ body {
   font-size: 15px;
   font-family: 'Manrope', sans-serif;
   text-align: center;
-  height: 100vh;
   color: $gray-blue;
   background: $v-pale-blue url(/images/bg-pattern.svg) no-repeat;
   display: flex;
@@ -32,7 +31,7 @@ body {
 
 .hero {
   background: url(/images/pattern-circles.svg) center / contain no-repeat;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 
   &__header {
     margin: 2rem 0 1rem 0;
@@ -220,12 +219,18 @@ body {
 
 
 @media (min-width: 850px) {
+  body {
+    height: 100vh;
+  }
+  
   .card {
     width: 50%;
     max-width: 500px;
   }
 
   .hero {
+    margin-top: 0;
+
     &__text {
       width: 100%;
     }

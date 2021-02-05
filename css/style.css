@@ -7,7 +7,6 @@ body {
   font-size: 15px;
   font-family: 'Manrope', sans-serif;
   text-align: center;
-  height: 100vh;
   color: #858fad;
   background: #fafbff url(/images/bg-pattern.svg) no-repeat;
   display: flex;
@@ -17,7 +16,7 @@ body {
 
 .hero {
   background: url(/images/pattern-circles.svg) center/contain no-repeat;
-  margin-bottom: 2rem; }
+  margin: 2rem 0; }
   .hero__header {
     margin: 2rem 0 1rem 0;
     color: #293356; }
@@ -151,11 +150,15 @@ body {
       opacity: 80%; }
 
 @media (min-width: 850px) {
+  body {
+    height: 100vh; }
   .card {
     width: 50%;
     max-width: 500px; }
-  .hero__text {
-    width: 100%; }
+  .hero {
+    margin-top: 0; }
+    .hero__text {
+      width: 100%; }
   .plan {
     display: flex;
     flex-wrap: wrap;
