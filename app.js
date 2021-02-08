@@ -24,9 +24,9 @@ function changePrice() {
   if(!toggle.checked) {
   price.innerHTML = `$${currentBilling.price}.00`;
   } else {
-    price.innerHTML = '$' + parseInt(currentBilling.price) * 0.75 + '.00';
+    price.innerHTML = `$ ${Number(currentBilling.price) * 0.75} .00`;
   };
 
-  let color = 'linear-gradient(90deg, rgb(165, 243, 235)' + (i * 25) + '%, rgb(234, 238, 251)' + (i * 25) + '%)';
+  let color = `linear-gradient(90deg, rgb(165, 243, 235) ${i * 25}%, rgb(234, 238, 251) ${i * 25}%`;
   slider.style.background = color;
 };
